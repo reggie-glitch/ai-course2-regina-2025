@@ -41,3 +41,6 @@ addopts = "-v --tb=short"
 [tool.black]
 line-length = 88
 target-version = ['py38']
+
+[tool.uv]
+python = "3.8"
