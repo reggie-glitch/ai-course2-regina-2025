@@ -1,9 +1,4 @@
-"""
-HTTP API для EDA CLI инструмента.
 
-Основа - код из семинара S04, расширенный новым эндпоинтом 
-/quality-flags-from-csv с использованием эвристик из HW03.
-"""
 import json
 import tempfile
 from pathlib import Path
@@ -13,7 +8,7 @@ import pandas as pd
 from fastapi import FastAPI, File, UploadFile, HTTPException, Query
 from fastapi.responses import JSONResponse
 
-# Импортируем наши функции из HW03
+
 from .core import load_data, compute_quality_flags, compute_basic_stats
 
 
@@ -37,11 +32,7 @@ def compute_quality(
     missing_ratio: float = Query(..., description="Доля пропущенных значений"),
     duplicate_ratio: float = Query(0.0, description="Доля дубликатов"),
 ) -> Dict[str, Any]:
-    """
-    Вычисление качества данных по предоставленным метрикам.
     
-    Основа - код из семинара S04.
-    """
     # Эвристики из семинара
     too_few_rows = bool(n_rows < 100)
     too_many_missing = bool(missing_ratio > 0.3)
@@ -134,15 +125,7 @@ async def compute_quality_flags_from_csv(
     zero_threshold: float = Query(0.3, description="Порог для нулевых значений в числовых колонках"),
     min_missing_share: float = Query(0.1, description="Минимальная доля пропусков для флагирования колонки"),
 ) -> Dict[str, Any]:
-    """
-    ВЫПОЛНЕНИЕ HW04: Новый эндпоинт с использованием эвристик из HW03.
     
-    Возвращает полный набор флагов качества, включая новые эвристики:
-    - Константные колонки
-    - Высококардинальные категориальные признаки
-    - Дубликаты ID колонок
-    - Много нулевых значений
-    """
     if not file.filename.endswith('.csv'):
         raise HTTPException(
             status_code=400,
@@ -248,7 +231,7 @@ def root():
         },
         "hw04_features": [
             "Новый эндпоинт /quality-flags-from-csv",
-            "Использование эвристик из HW03: константные колонки, высококардинальные признаки и др.",
+            "Использование константныx колонок, высококардинальных признаков и др.",
             "Параметризация порогов через query-параметры"
         ]
     }
