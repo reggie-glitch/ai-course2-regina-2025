@@ -116,3 +116,10 @@
 Подробные правила и ограничения описаны в файле [`SECURITY.md`](./SECURITY.md). Пожалуйста, ознакомьтесь с ним перед началом работы.
 
 ---
+
+```bash
+uv sync
+uv run eda-cli overview data/example.csv
+uv run eda-cli report data/example.csv --out-dir reports
+
+'''

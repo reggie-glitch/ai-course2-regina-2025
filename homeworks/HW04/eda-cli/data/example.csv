@@ -1,0 +1,11 @@
+id,name,age,salary,department,country,score,is_active
+1,Alice,30,50000,Sales,USA,85.5,true
+2,Bob,25,45000,Marketing,UK,92.0,true
+3,Charlie,35,60000,IT,Germany,78.5,false
+4,David,28,55000,HR,France,88.0,true
+5,Eve,40,75000,IT,USA,95.5,true
+6,Frank,22,40000,Sales,Italy,70.0,false
+7,Grace,45,80000,Marketing,Spain,82.5,true
+8,Helen,32,52000,HR,Germany,91.0,true
+9,Ivan,29,48000,Sales,Russia,79.5,false
+10,Julia,38,70000,IT,France,86.0,true
