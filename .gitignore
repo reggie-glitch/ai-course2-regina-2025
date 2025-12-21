@@ -9,3 +9,7 @@ test_*.sh
 *.egg-info/
 build/
 dist/
+.DS_Store
+*.pyc
+__pycache__/
+.ipynb_checkpoints/
