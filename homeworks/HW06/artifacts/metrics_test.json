@@ -1,0 +1,26 @@
+{
+  "accuracy":{
+    "Dummy":0.6766666667,
+    "LogisticRegression":0.8296666667,
+    "DecisionTree":0.869,
+    "RandomForest":0.9303333333,
+    "GradientBoosting":0.9313333333,
+    "Stacking":0.933
+  },
+  "f1":{
+    "Dummy":0.0,
+    "LogisticRegression":0.7146845338,
+    "DecisionTree":0.7755568247,
+    "RandomForest":0.8865979381,
+    "GradientBoosting":0.8905419766,
+    "Stacking":0.8941548183
+  },
+  "roc_auc":{
+    "Dummy":0.5,
+    "LogisticRegression":0.8789091463,
+    "DecisionTree":0.9055784368,
+    "RandomForest":0.969375857,
+    "GradientBoosting":0.9718378955,
+    "Stacking":0.9694312122
+  }
+}
