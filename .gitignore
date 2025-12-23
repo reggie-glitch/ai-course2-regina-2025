@@ -3,7 +3,6 @@ __pycache__/
 .venv/
 venv/
 *.save
-report.*
 test_*.sh
 # Python package metadata
 *.egg-info/
@@ -13,3 +12,9 @@ dist/
 *.pyc
 __pycache__/
 .ipynb_checkpoints/
+*.backup
+HW06_correct.ipynb
+S06-hw-dataset-01.csv
+copy_cells.py
+__pycache__/
+*.pyc
