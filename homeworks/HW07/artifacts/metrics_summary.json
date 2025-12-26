@@ -1,0 +1,91 @@
+{
+  "dataset_1": {
+    "dataset_name": "S07-hw-dataset-01.csv",
+    "description": "Числовые признаки в разных шкалах + шумовые признаки",
+    "shape": [
+      12000,
+      9
+    ],
+    "kmeans": {
+      "algorithm": "KMeans (k=2)",
+      "n_clusters": 2,
+      "noise_ratio_%": 0.0,
+      "silhouette": 0.5216395622404242,
+      "davies_bouldin": 0.6853295219054459,
+      "calinski_harabasz": 11786.954622671528
+    },
+    "dbscan": {
+      "algorithm": "DBSCAN (eps=2.000, min_samples=10)",
+      "n_clusters": 2,
+      "noise_ratio_%": 0.0,
+      "silhouette": 0.5216395622404242,
+      "davies_bouldin": 0.6853295219054459,
+      "calinski_harabasz": 11786.954622671528
+    },
+    "best_algorithm": "DBSCAN"
+  },
+  "dataset_2": {
+    "dataset_name": "S07-hw-dataset-02.csv",
+    "description": "Нелинейная структура + выбросы + лишний шумовой признак",
+    "shape": [
+      8000,
+      4
+    ],
+    "kmeans": {
+      "algorithm": "KMeans (k=2)",
+      "n_clusters": 2,
+      "noise_ratio_%": 0.0,
+      "silhouette": 0.3068610017701601,
+      "davies_bouldin": 1.3234721699867644,
+      "calinski_harabasz": 3573.3933329348392
+    },
+    "dbscan": {
+      "algorithm": "DBSCAN (eps=0.100, min_samples=10)",
+      "n_clusters": 46,
+      "noise_ratio_%": 91.85,
+      "silhouette": 0.5812458584406734,
+      "davies_bouldin": 0.5779820069800065,
+      "calinski_harabasz": 2758.1225203015906
+    },
+    "best_algorithm": "DBSCAN"
+  },
+  "dataset_3": {
+    "dataset_name": "S07-hw-dataset-03.csv",
+    "description": "Кластеры разной плотности + фоновый шум",
+    "shape": [
+      15000,
+      5
+    ],
+    "kmeans": {
+      "algorithm": "KMeans (k=3)",
+      "n_clusters": 3,
+      "noise_ratio_%": 0.0,
+      "silhouette": 0.31554470037825183,
+      "davies_bouldin": 1.1577256320598661,
+      "calinski_harabasz": 6957.162639510166
+    },
+    "dbscan": {
+      "algorithm": "DBSCAN (eps=0.050, min_samples=3)",
+      "n_clusters": 17,
+      "noise_ratio_%": 99.64666666666666,
+      "silhouette": 0.8661096572999246,
+      "davies_bouldin": 0.1585197725880259,
+      "calinski_harabasz": 6029.391139900043
+    },
+    "best_algorithm": "DBSCAN"
+  },
+  "stability_test": {
+    "dataset": "S07-hw-dataset-01.csv",
+    "n_clusters": 2,
+    "n_runs": 5,
+    "ari_scores": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mean_ari": 1.0,
+    "std_ari": 0.0
+  }
+}
