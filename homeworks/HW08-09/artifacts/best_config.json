@@ -1,0 +1,22 @@
+{
+    "model": "MLP",
+    "input_size": 784,
+    "hidden_sizes": [
+        512,
+        256
+    ],
+    "num_classes": 10,
+    "dropout": 0.0,
+    "use_batchnorm": true,
+    "activation": "ReLU",
+    "optimizer": "Adam",
+    "lr": 0.001,
+    "seed": 42,
+    "dataset": "FashionMNIST",
+    "epochs_trained": 10,
+    "best_val_accuracy": 89.625,
+    "best_val_loss": 0.2936801674993748,
+    "early_stopping_patience": 5,
+    "test_accuracy": 88.64,
+    "test_loss": 0.3531728248782219
+}
