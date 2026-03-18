@@ -1,8 +1,8 @@
-experiment_id,dataset,seed,model_summary,optimizer,lr,momentum,weight_decay,epochs_trained,best_val_accuracy,best_val_loss
-E1,FashionMNIST,42,512-256 ReLU noBN nodrop,Adam,0.001,,0.0,15,89.3,0.3236741031262469
-E2,FashionMNIST,42,512-256 ReLU noBN dropout0.3,Adam,0.001,,0.0,15,89.00833333333334,0.31891201662414886
-E3,FashionMNIST,42,512-256 ReLU BN nodrop,Adam,0.001,,0.0,15,89.775,0.292266023365107
-E4,FashionMNIST,42,512-256 ReLU BN nodrop,Adam,0.001,,0.0,10,89.625,0.2936801674993748
-O1,FashionMNIST,42,512-256 ReLU BN nodrop,Adam,0.1,,0.0,8,88.06666666666666,0.35501501257432266
-O2,FashionMNIST,42,512-256 ReLU BN nodrop,Adam,1e-05,,0.0,8,87.275,0.3739464118125591
-O3,FashionMNIST,42,512-256 ReLU BN nodrop,SGD,0.01,0.9,0.0001,12,89.36666666666666,0.3019881198935686
+experiment_id,dataset,seed,model_summary,optimizer,lr,momentum,weight_decay,epochs_trained,best_val_accuracy,best_val_loss,test_accuracy
+E1,CIFAR10,42,"hidden=[256, 128], dropout=0.0, batchnorm=False",Adam,0.001,,0.0,15,0.5237,1.38335029296875,
+E2,CIFAR10,42,"hidden=[256, 128], dropout=0.3, batchnorm=False",Adam,0.001,,0.0,15,0.5208,1.352419009590149,
+E3,CIFAR10,42,"hidden=[256, 128], dropout=0.0, batchnorm=True",Adam,0.001,,0.0,15,0.5517,1.3140292930603028,
+E4,CIFAR10,42,"hidden=[256, 128], dropout=0.0, batchnorm=True",Adam,0.001,,0.0,10,0.5442,1.3074291681289674,0.538
+O1,CIFAR10,42,"hidden=[256, 128], dropout=0.3, batchnorm=True",Adam,0.1,,0.0,8,0.3924,1.7107204362869262,
+O2,CIFAR10,42,"hidden=[256, 128], dropout=0.3, batchnorm=True",Adam,1e-05,,0.0,8,0.4546,1.6245318840026854,
+O3,CIFAR10,42,"hidden=[256, 128], dropout=0.3, batchnorm=True",SGD,0.01,0.9,0.0001,12,0.5467,1.2831607791900634,

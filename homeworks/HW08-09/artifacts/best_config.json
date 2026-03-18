@@ -1,22 +1,20 @@
 {
-    "model": "MLP",
-    "input_size": 784,
+  "experiment_id": "E4",
+  "dataset": "CIFAR10",
+  "seed": 42,
+  "model_config": {
     "hidden_sizes": [
-        512,
-        256
+      256,
+      128
     ],
-    "num_classes": 10,
-    "dropout": 0.0,
-    "use_batchnorm": true,
-    "activation": "ReLU",
-    "optimizer": "Adam",
-    "lr": 0.001,
-    "seed": 42,
-    "dataset": "FashionMNIST",
-    "epochs_trained": 10,
-    "best_val_accuracy": 89.625,
-    "best_val_loss": 0.2936801674993748,
-    "early_stopping_patience": 5,
-    "test_accuracy": 88.64,
-    "test_loss": 0.3531728248782219
+    "dropout_prob": 0.0,
+    "use_batchnorm": true
+  },
+  "optimizer": "Adam",
+  "lr": 0.001,
+  "weight_decay": 0.0,
+  "momentum": null,
+  "early_stopping_patience": 3,
+  "best_val_accuracy": 0.5442,
+  "test_accuracy": 0.538
 }
