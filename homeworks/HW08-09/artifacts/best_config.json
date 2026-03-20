@@ -1,20 +1,22 @@
 {
-  "experiment_id": "E4",
-  "dataset": "CIFAR10",
-  "seed": 42,
-  "model_config": {
+    "experiment_id": "E4",
+    "dataset": "CIFAR10",
+    "seed": 42,
+    "model": "MLP",
+    "input_size": 3072,
     "hidden_sizes": [
-      256,
-      128
+        256,
+        128,
+        64
     ],
-    "dropout_prob": 0.0,
-    "use_batchnorm": true
-  },
-  "optimizer": "Adam",
-  "lr": 0.001,
-  "weight_decay": 0.0,
-  "momentum": null,
-  "early_stopping_patience": 3,
-  "best_val_accuracy": 0.5442,
-  "test_accuracy": 0.538
+    "activation": "ReLU",
+    "use_batchnorm": true,
+    "dropout": null,
+    "optimizer": "Adam",
+    "lr": 0.001,
+    "weight_decay": 0,
+    "momentum": null,
+    "epochs_trained": 17,
+    "best_val_accuracy": 0.5469,
+    "best_val_loss": 1.3004333305358886
 }
