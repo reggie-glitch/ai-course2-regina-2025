@@ -1,11 +1,17 @@
 {
     "model": "GRU",
+    "model_class": "GRUModel",
+    "input_size": 1,
     "hidden_size": 64,
     "num_layers": 2,
     "dropout": 0.2,
     "window_size": 24,
+    "horizon": 1,
     "batch_size": 64,
-    "lr": 0.001,
+    "learning_rate": 0.001,
+    "num_epochs": 60,
+    "best_val_mae": 13.395304679870605,
     "seed": 42,
-    "scaler": "StandardScaler"
+    "scaler": "StandardScaler",
+    "device": "cpu"
 }

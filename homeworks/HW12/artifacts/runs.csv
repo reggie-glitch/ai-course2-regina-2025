@@ -1,5 +1,5 @@
 experiment_id,task,dataset,seed,split_summary,window_size,horizon,model_summary,features_summary,scaler,optimizer,lr,epochs_trained,best_val_mae,best_val_rmse,best_val_mape,test_mae,test_rmse,test_mape,notes
-B1,forecasting,S12-hw-dataset,42,80/10/10 temporal,,1,Naive Last,None,None,None,,0,6.254976076555024,7.9303317234538895,4.158438715668429,,,,Последнее значение
-B2,forecasting,S12-hw-dataset,42,80/10/10 temporal,24.0,1,Moving Average,None,None,None,,0,13.171732225177864,15.853532466674391,8.842020757512788,,,,Rolling mean window=24
-B3,forecasting,S12-hw-dataset,42,80/10/10 temporal,,1,Ridge,lags + rolling + calendar,StandardScaler,None,,0,5.150330580214803,6.470495847910537,3.3945379711917467,5.323721514756173,6.918271239014499,3.4568466392370554,Ridge on engineered features
-R1,forecasting,S12-hw-dataset,42,80/10/10 temporal,24.0,1,"GRU (64, 2 layers)",windowed target only,StandardScaler,Adam,0.001,60,13.395304679870605,15.856388265557985,8.708198547363281,,,,GRU window=24
+B1,forecasting,S12-hw-dataset,42,80/10/10 temporal,,1,Naive Last,None,None,None,,0,6.218651960784314,7.8725646249814805,4.111667340534998,,,,Прогноз = последнее известное значение
+B2,forecasting,S12-hw-dataset,42,80/10/10 temporal,24.0,1,Moving Average,None,None,None,,0,13.278379994223855,15.99464633175416,8.89141440170414,,,,Скользящее среднее window=24 (только прошлое)
+B3,forecasting,S12-hw-dataset,42,80/10/10 temporal,,1,Ridge,"12 features: lags(1,7,14,24) + rolling(mean7,std7,mean24) + calendar(5)",StandardScaler,None,,0,4.674561392540866,5.829950697438708,3.051163838100905,4.886243760085007,5.981089117821873,3.1827092452416244,Ridge regression on engineered features
+R1,forecasting,S12-hw-dataset,42,80/10/10 temporal,24.0,1,"GRU (hidden=64, layers=2, dropout=0.2)",windowed target (24 steps),StandardScaler,Adam,0.001,60,13.395304679870605,15.856388265557985,8.708198547363281,,,,"GRU with window=24, early stopping by val MAE"
