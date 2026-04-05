@@ -1,0 +1,6 @@
+query,before_retrieved_sources,after_retrieved_sources,changed
+What is bagging in ensemble learning?,doc_04_random_forest | doc_02_logistic_regression | doc_03_decision_tree,doc_21_bagging | doc_21_bagging | doc_04_random_forest,1
+How does boosting differ from bagging?,doc_04_random_forest | doc_03_decision_tree | doc_12_regularization,doc_21_bagging | doc_22_boosting | doc_21_bagging,1
+What is batch normalization?,doc_14_gradient_descent | doc_14_gradient_descent | doc_12_regularization,doc_23_batch_norm | doc_23_batch_norm | doc_23_batch_norm,1
+How does dropout prevent overfitting?,doc_12_regularization | doc_11_overfitting | doc_11_overfitting,doc_12_regularization | doc_24_dropout | doc_24_dropout,1
+What is Retrieval-Augmented Generation (RAG)?,doc_19_transfer_learning | doc_09_rnn | doc_17_attention,doc_25_rag | doc_25_rag | doc_19_transfer_learning,1

@@ -1,0 +1,13 @@
+query,expected_source,retrieved_sources,hit_at_k,rank_of_first_relevant
+What is linear regression used for?,doc_01_linear_regression,doc_01_linear_regression | doc_02_logistic_regression | doc_01_linear_regression,1,1
+How does logistic regression classify data?,doc_02_logistic_regression,doc_02_logistic_regression | doc_02_logistic_regression | doc_20_evaluation_metrics,1,1
+How is a decision tree built?,doc_03_decision_tree,doc_03_decision_tree | doc_03_decision_tree | doc_03_decision_tree,1,1
+What makes random forest better than a single tree?,doc_04_random_forest,doc_04_random_forest | doc_04_random_forest | doc_04_random_forest,1,1
+What is the kernel trick in SVM?,doc_05_svm,doc_05_svm | doc_05_svm | doc_05_svm,1,1
+How does gradient descent optimize models?,doc_14_gradient_descent,doc_14_gradient_descent | doc_14_gradient_descent | doc_01_linear_regression,1,1
+What is overfitting and how to prevent it?,doc_11_overfitting,doc_11_overfitting | doc_11_overfitting | doc_11_overfitting,1,1
+What is regularization in machine learning?,doc_12_regularization,doc_12_regularization | doc_12_regularization | doc_14_gradient_descent,1,1
+How does PCA reduce dimensionality?,doc_16_pca,doc_16_pca | doc_16_pca | doc_06_knn,1,1
+What is transfer learning?,doc_19_transfer_learning,doc_19_transfer_learning | doc_08_cnn | doc_19_transfer_learning,1,1
+How do sentence embeddings work?,doc_18_embeddings,doc_18_embeddings | doc_18_embeddings | doc_18_embeddings,1,1
+What metrics are used to evaluate classifiers?,doc_20_evaluation_metrics,doc_20_evaluation_metrics | doc_20_evaluation_metrics | doc_20_evaluation_metrics,1,1
