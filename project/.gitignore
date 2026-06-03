@@ -1,0 +1,25 @@
+# Секреты — никогда не коммитить!
+.env
+*.env
+
+# Данные (большие файлы)
+data/*.csv
+data/*.pkl
+data/*.txt
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Виртуальное окружение
+venv/
+.venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+venv/

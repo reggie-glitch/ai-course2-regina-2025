@@ -1,0 +1,1 @@
+{"Logistic\nRegression": {"F1": 0.7408, "ROC-AUC": 0.8714}, "Decision\nTree": {"F1": 0.7564, "ROC-AUC": 0.8027}, "Random\nForest": {"F1": 0.7544, "ROC-AUC": 0.962}, "XGBoost": {"F1": 0.7909, "ROC-AUC": 0.9666}}

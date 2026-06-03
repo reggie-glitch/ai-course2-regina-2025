@@ -1,0 +1,75 @@
+# Конфигурация проекта IDS (бинарная классификация: normal vs attack)
+
+data:
+  train_url: "https://raw.githubusercontent.com/defcom17/NSL_KDD/master/KDDTrain+.txt"
+  test_url:  "https://raw.githubusercontent.com/defcom17/NSL_KDD/master/KDDTest+.txt"
+  train_path: "data/KDDTrain+.csv"
+  test_path:  "data/KDDTest+.csv"
+
+  # Все 43 колонки датасета NSL-KDD (41 признак + label + difficulty)
+  columns:
+    - duration
+    - protocol_type
+    - service
+    - flag
+    - src_bytes
+    - dst_bytes
+    - land
+    - wrong_fragment
+    - urgent
+    - hot
+    - num_failed_logins
+    - logged_in
+    - num_compromised
+    - root_shell
+    - su_attempted
+    - num_root
+    - num_file_creations
+    - num_shells
+    - num_access_files
+    - num_outbound_cmds
+    - is_host_login
+    - is_guest_login
+    - count
+    - srv_count
+    - serror_rate
+    - srv_serror_rate
+    - rerror_rate
+    - srv_rerror_rate
+    - same_srv_rate
+    - diff_srv_rate
+    - srv_diff_host_rate
+    - dst_host_count
+    - dst_host_srv_count
+    - dst_host_same_srv_rate
+    - dst_host_diff_srv_rate
+    - dst_host_same_src_port_rate
+    - dst_host_srv_diff_host_rate
+    - dst_host_serror_rate
+    - dst_host_srv_serror_rate
+    - dst_host_rerror_rate
+    - dst_host_srv_rerror_rate
+    - label
+    - difficulty
+
+  categorical_cols:
+    - protocol_type
+    - service
+    - flag
+
+model:
+  artifact_path: "data/model_artifacts.pkl"
+  random_state: 42
+  test_size: 0.2
+
+  # Гиперпараметры финальной модели XGBoost
+  xgb_params:
+    n_estimators: 200
+    max_depth: 6
+    learning_rate: 0.1
+    subsample: 0.8
+    colsample_bytree: 0.8
+
+service:
+  host: "0.0.0.0"
+  port: 8000

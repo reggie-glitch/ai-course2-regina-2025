@@ -1,0 +1,23 @@
+version: "3.9"
+
+services:
+  ids_service:
+    build: .
+    container_name: ids_service
+    ports:
+      - "8000:8000"
+    volumes:
+      # Пробрасываем папку data/ чтобы не пересобирать образ после обучения
+      - ./data:/app/data
+    env_file:
+      - configs/.env.example   # в продакшене заменить на реальный .env
+    environment:
+      CONFIG_PATH: configs/config.yaml
+      MODEL_PATH:  data/model_artifacts.pkl
+      LOG_LEVEL:   INFO
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout:  10s
+      retries:  3
